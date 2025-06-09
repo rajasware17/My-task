@@ -1,0 +1,183 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: 'Inter', sans-serif;
+}
+
+body {
+  background-color: #f2f2f2;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 40px;
+  min-height: 100vh;
+}
+
+.container {
+  width: 400px;
+  background-color: #fff;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+  padding: 30px;
+}
+
+.bogo-line {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin: 20px 0;
+}
+
+.bogo-line .line {
+  flex: 1;
+  height: 1px;
+  background-color: #ccc;
+}
+
+.bogo-line .text {
+  white-space: nowrap;
+  font-weight: bold;
+  color: #FF6B82;
+}
+
+.offers {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.offer-box {
+  position: relative;
+  border: 2px solid #ddd;
+  padding: 23px;
+  background-color: #fafafa;
+  transition: all 0.3s ease;
+  cursor: pointer;
+ 
+}
+
+.offer-box:hover {
+  border-color: #FF6B82;
+  background-color: #fff4f4;
+}
+
+.selected-badge {
+  position: absolute;
+  top: 12px;
+  right: 12px;
+  background-color: #FF6B82;
+  color: white;
+  font-size: 12px;
+  font-weight: 600;
+  padding: 4px 10px;
+  border-radius: 12px;
+  display: none;
+  user-select: none;
+}
+
+.offer-box.selected .selected-badge {
+  display: block;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.left-info {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.tag.red {
+  background-color: #FF6B82;
+  color: white;
+  padding: 2px 6px;
+  border-radius: 4px;
+  font-size: 12px;
+}
+
+.right-price {
+  text-align: right;
+}
+
+.price-box {
+  font-size: 14px;
+  font-weight: 100;
+  color: #000;
+}
+
+.old-price-smaller {
+  font-size: 10px;
+  color: #888;
+  text-decoration: line-through;
+  margin-top: 2px;
+}
+
+.hover-content {
+  display: none;
+  margin-top: 12px;
+}
+
+.offer-box:hover .hover-content {
+  display: block;
+}
+
+.variant-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px;
+}
+
+.variant-grid label {
+  font-size: 12px;
+  margin-bottom: 4px;
+  display: block;
+  font-weight: 500;
+}
+
+.variant-grid select {
+  width: 100%;
+  padding: 5px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+.footer {
+  margin-top: 20px;
+  text-align: center;
+}
+
+.footer-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.footer .delivery {
+  font-size: 14px;
+  color: #FF6B82;
+  font-weight: 600;
+  margin: 0;
+}
+
+.footer .total {
+  font-weight: 100;
+  margin-top: 6px;
+}
+
+.footer button {
+  margin-top: 10px;
+  padding: 14px 28px;
+  font-size: 13px;
+  font-weight: 600;
+  color: white;
+  background-color: #FF6B82;
+  border: none;
+  cursor: pointer;
+  width: 100%;
+  border-radius: 6px;
+}
